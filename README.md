@@ -1,9 +1,11 @@
 # Agent IA de Réponse Automatique pour Redmine
+
 **Proof of Concept (PoC) – Automatisation des réponses aux tickets sans réponse**
 
 ---
 
 ## 🎯 Objectif du Projet
+
 Développer un **agent IA léger** qui :
 - **Détecte** les tickets Redmine sans réponse depuis **24h**.
 - **Génère une réponse automatique** en utilisant :
@@ -17,6 +19,7 @@ Développer un **agent IA léger** qui :
 ---
 
 ## 🛠 Technologies à Utiliser
+
 | Technologie | Rôle                                                                 |
 |-------------|----------------------------------------------------------------------|
 | **Python**  | Langage principal pour le script et la logique métier.              |
@@ -99,7 +102,6 @@ redmine-ai-agent/
     └── test_utils/
         └── test_config.py
 ```
-```
 
 ---
 
@@ -132,6 +134,7 @@ pytest tests/
 3. **Améliorations possibles** :
    - Système de feedback ("✅ Utile" / "❌ Non pertinent") qui demandera la création d'une API avec FastAPI.
    - Utilisation d’**embeddings** pour améliorer la recherche de tickets similaires.
+   - Utilser cette agent pour répondre sur d'autres plateformes (Jira par exemple)
 
 ---
 
@@ -142,6 +145,10 @@ pytest tests/
 - **Performance** :
   - Traiter les tickets par lots (ex: 10 à la fois).
   - Utiliser un cache local pour éviter de re-télécharger le wiki.
+- **Code** :
+  - Respecter la PEP8 et le bonnes pratiques de développement Python
+  - Utiliser Ruff pour formater le code
+  - Utiliser des anotation de type (type hint) et les vérifier avec MyPy
 
 ---
 
@@ -166,29 +173,8 @@ pytest tests/
 
 ---
 
-## 🎯 Critères d’Évaluation
-| Critère               | Poids |
-|-----------------------|-------|
-| Fonctionnalité de base | 40%   |
-| Qualité du code       | 30%   |
-| Originalité           | 20%   |
-| Documentation         | 10%   |
-
----
-
 ## 🔍 Ressources
 - [Documentation API Redmine](https://www.redmine.org/projects/redmine/wiki/Rest_api)
 - [Ollama Python Client](https://github.com/jmorganca/ollama-python)
 - [Guide de Prompt Engineering](https://www.promptingguide.ai/)
-
----
-
-## 💬 Questions Fréquentes
-**Q : Comment éviter les réponses en boucle ?**
-→ Ajouter un tag ou un statut "Répondu par IA" après publication.
-
-**Q : Quel modèle Ollama utiliser ?**
-→ `mistral` ou `llama3` pour un bon compromis rapidité/qualité.
-
-**Q : Comment tester sans risquer de publier ?**
-→ Utiliser le mode `DRY_RUN=True` dans `.env`.
+  
