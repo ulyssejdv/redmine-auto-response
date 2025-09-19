@@ -43,7 +43,8 @@ Développer un **agent IA léger** qui :
 - **Données du ticket** : Titre, description, historique.
 - **Sources pour l’IA** :
   - Pages wiki Redmine (`/projects/{id}/wiki/index.json`).
-  - 5 derniers tickets **résolus** avec des mots-clés similaires.
+  - Tickets **résolus** avec des mots-clés similaires.
+  - Documentation MkDocs (Markdown)
 
 ### 3. Génération de Réponse
 - **Prompt Ollama** :
