@@ -147,7 +147,7 @@ pytest tests/
   - Traiter les tickets par lots (ex: 10 à la fois).
   - Utiliser un cache local pour éviter de re-télécharger le wiki.
 - **Code** :
-  - Respecter la PEP8 et le bonnes pratiques de développement Python
+  - Respecter la **PEP8** et les bonnes pratiques de développement Python
   - Utiliser Ruff pour formater le code
   - Utiliser des anotation de type (type hint) et les vérifier avec MyPy
 
